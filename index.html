@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L2 Brands — Power 4 Rights & Rates</title>
+<title>L2 Brands &mdash; All Schools Rights &amp; Rates</title>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Source Sans 3',Arial,sans-serif;background:#f0f2f5;min-height:100vh}
 /* HEADER */
@@ -24,6 +25,29 @@ body{font-family:'Source Sans 3',Arial,sans-serif;background:#f0f2f5;min-height:
 .filter-btn{padding:7px 14px;border:1.5px solid #dde1ea;border-radius:20px;font-size:12px;font-family:inherit;cursor:pointer;background:#fff;color:#555;font-weight:600;transition:all 0.15s;white-space:nowrap}
 .filter-btn:hover{border-color:#1a1a2e;color:#1a1a2e}
 .filter-btn.active{background:#1a1a2e;color:#fff;border-color:#1a1a2e}
+.filter-row-label{font-size:11px;font-weight:700;color:#888;letter-spacing:0.5px;text-transform:uppercase;align-self:center;white-space:nowrap;margin-right:2px}
+.filter-divider{width:1px;background:#dde1ea;align-self:stretch;margin:0 4px}
+.filter-clear{font-size:11px;color:#888;cursor:pointer;text-decoration:underline;align-self:center;white-space:nowrap;background:none;border:none;font-family:inherit;padding:0}
+.filter-clear:hover{color:#1a1a2e}
+/* Summary view */
+.summary-wrap{background:#fff;border-radius:8px;border:1.5px solid #dde1ea;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.summary-header{background:#1a1a2e;color:#fff;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.summary-title{font-size:13px;font-weight:700}
+.summary-subtitle{font-size:11px;color:rgba(255,255,255,0.6)}
+.summary-table{width:100%;border-collapse:collapse;font-size:11.5px}
+.summary-table thead tr{background:#f0f2f5}
+.summary-table thead th{padding:7px 10px;text-align:left;font-size:10px;font-weight:700;letter-spacing:0.5px;color:#555;text-transform:uppercase;border-bottom:1.5px solid #dde1ea;white-space:nowrap}
+.summary-table thead th:not(:first-child){text-align:center}
+.summary-table tbody tr{border-bottom:1px solid #f0f2f5;cursor:pointer;transition:background 0.12s}
+.summary-table tbody tr:hover{background:#f7f8fa}
+.summary-table td{padding:6px 10px;vertical-align:middle}
+.summary-table td:not(:first-child){text-align:center}
+.s-school{font-weight:600;color:#1a1a2e;font-size:12px}
+.s-meta{font-size:10px;color:#888;margin-top:1px}
+.s-check{color:var(--sc);font-size:14px;font-weight:700}
+.s-na{color:#ccc;font-size:13px}
+.s-denied{color:#cc0000;font-size:9px;font-weight:700}
+.s-hw{color:#7B6000;font-size:9px;font-weight:700}
 /* SCHOOL LIST */
 .school-grid{max-width:900px;margin:20px auto;padding:0 16px 40px;display:flex;flex-direction:column;gap:12px}
 .no-results{text-align:center;padding:60px 20px;color:#888;font-size:15px}
@@ -72,11 +96,35 @@ tbody td:first-child{text-align:left;padding-left:14px;color:#444;font-weight:40
   .search-box{width:100%}
   .card-name{font-size:13px}
 }
+
+.filter-row-label{font-size:11px;font-weight:700;color:#888;letter-spacing:0.5px;text-transform:uppercase;align-self:center;white-space:nowrap;margin-right:2px}
+.filter-divider{width:1px;background:#dde1ea;align-self:stretch;margin:0 6px;min-height:20px}
+.filter-clear-btn{font-size:11px;color:#888;cursor:pointer;text-decoration:underline;background:none;border:none;font-family:inherit;padding:4px 6px;align-self:center}
+.filter-clear-btn:hover{color:#1a1a2e}
+.summary-wrap{background:#fff;border-radius:8px;border:1.5px solid #dde1ea;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.summary-header{background:#1a1a2e;color:#fff;padding:10px 16px}
+.summary-title{font-size:13px;font-weight:700}
+.summary-subtitle{font-size:11px;color:rgba(255,255,255,0.6);margin-top:2px}
+.summary-table{width:100%;border-collapse:collapse;font-size:11.5px}
+.summary-table thead tr{background:#f0f2f5}
+.summary-table thead th{padding:7px 10px;text-align:left;font-size:10px;font-weight:700;letter-spacing:0.5px;color:#555;text-transform:uppercase;border-bottom:1.5px solid #dde1ea;white-space:nowrap}
+.summary-table thead th:not(:first-child){text-align:center;min-width:60px}
+.summary-table tbody tr{border-bottom:1px solid #f0f2f5;cursor:pointer;transition:background 0.12s}
+.summary-table tbody tr:hover{background:#f0f4ff}
+.summary-table td{padding:6px 10px;vertical-align:middle}
+.summary-table td:not(:first-child){text-align:center}
+.s-school{font-weight:600;color:#1a1a2e;font-size:12px}
+.s-meta{font-size:10px;color:#888;margin-top:1px}
+.s-check{font-size:13px;font-weight:700}
+.s-na{color:#ccc;font-size:12px}
+.s-denied{color:#cc0000;font-size:9px;font-weight:700}
+.s-hw{color:#7B6000;font-size:9px;font-weight:700}
 </style>
 </head>
 <body>
+
 <div class="app-header">
-  <div class="logo">L2 Brands <span>Rights &amp; Rates + Vault — All Schools</span></div>
+  <div class="logo">L2 Brands <span>Rights &amp; Rates + Vault &mdash; All Schools</span></div>
   <div class="badge-count" id="schoolCount">796 schools</div>
 </div>
 
@@ -87,12 +135,30 @@ tbody td:first-child{text-align:left;padding-left:14px;color:#444;font-weight:40
       <input type="text" id="searchInput" placeholder="Search school name..." autocomplete="off" autocorrect="off" spellcheck="false">
     </div>
     <div class="filter-row">
-      <button class="filter-btn active" data-conf="ALL">All Schools</button>
-      <button class="filter-btn" data-p4="1">⭐ Power 4 Only</button>
-      <button class="filter-btn" data-conf="SEC">SEC</button>
-      <button class="filter-btn" data-conf="BIG 10">Big Ten</button>
-      <button class="filter-btn" data-conf="ACC">ACC</button>
-      <button class="filter-btn" data-conf="BIG 12">Big 12</button>
+      <span class="filter-row-label">Conference</span>
+      <button class="filter-btn active" id="confALL">All Schools</button>
+      <button class="filter-btn" id="p4btn">⭐ Power 4 Only</button>
+      <button class="filter-btn" id="confSEC">SEC</button>
+      <button class="filter-btn" id="confBIG10">Big Ten</button>
+      <button class="filter-btn" id="confACC">ACC</button>
+      <button class="filter-btn" id="confBIG12">Big 12</button>
+    </div>
+    <div class="filter-row" style="margin-top:7px">
+      <span class="filter-row-label">Channel</span>
+      <button class="filter-btn" id="chCAMP">CAMP</button>
+      <button class="filter-btn" id="chSGSS">SGSS</button>
+      <button class="filter-btn" id="chITC">ITC</button>
+      <button class="filter-btn" id="chSMT">SMT</button>
+      <button class="filter-btn" id="chGOLF">GOLF</button>
+      <div class="filter-divider"></div>
+      <span class="filter-row-label">Brand</span>
+      <button class="filter-btn" id="brLeague">League</button>
+      <button class="filter-btn" id="brLegacy">Legacy</button>
+      <button class="filter-btn" id="brLocale">Locale</button>
+      <button class="filter-btn" id="brOurayApp">Ouray Apparel</button>
+      <button class="filter-btn" id="brOurayHW">Ouray Headwear</button>
+      <button class="filter-btn" id="brVault">Vault/Vintage</button>
+      <button class="filter-clear-btn" id="clearBtn" style="display:none">&#x2715; Clear</button>
     </div>
   </div>
 </div>
@@ -106,76 +172,102 @@ const CHANNEL_NAMES = {CAMP:'Campus / Local',SGSS:'Spec. &amp; Gen. Sporting Goo
 const CHANNELS = ['CAMP','SGSS','ITC','SMT','GOLF'];
 const ROWS = [
   {cat:'Brand Labels',items:[
-    {key:'League',label:'League'},
-    {key:'Legacy',label:'Legacy'},
-    {key:'Vault',label:'Vault/Vintage'},
-    {key:'Locale',label:'Locale'},
-    {key:'OurayApp',label:'Ouray Apparel'},
-    {key:'OurayHW',label:'Ouray Headwear'},
+    {key:'League',label:'League'},{key:'Legacy',label:'Legacy'},{key:'Vault',label:'Vault/Vintage'},
+    {key:'Locale',label:'Locale'},{key:'OurayApp',label:'Ouray Apparel'},{key:'OurayHW',label:'Ouray Headwear'},
   ]},
   {cat:"Men's",items:[
-    {key:'MenTees',label:"Men's Tees"},
-    {key:'MenFleece',label:"Men's Fleece"},
-    {key:'MenGolf',label:"Men's Golf/Polo"},
-    {key:'MenQZ',label:"Men's Non-Fleece ¼ Zip"},
-    {key:'Outerwear',label:'Outerwear'},
+    {key:'MenTees',label:"Men's Tees"},{key:'MenFleece',label:"Men's Fleece"},
+    {key:'MenGolf',label:"Men's Golf/Polo"},{key:'MenQZ',label:"Men's Non-Fleece &frac14; Zip"},{key:'Outerwear',label:'Outerwear'},
   ]},
-  {cat:"Women's",items:[
-    {key:'WomTees',label:"Women's Tees"},
-    {key:'WomFleece',label:"Women's Fleece"},
-  ]},
-  {cat:'Headwear',items:[
-    {key:'HW',label:'Headwear'},
-    {key:'Knit',label:'Knit Caps'},
-  ]},
-  {cat:'Youth',items:[
-    {key:'YouthTees',label:'Youth Tees'},
-    {key:'YouthFleece',label:'Youth Fleece'},
-    {key:'WinterKnits',label:'Winter Knits'},
-  ]},
-  {cat:'Other',items:[
-    {key:'Hair',label:'Hair Accessories'},
-    {key:'HomeDecor',label:'Home Décor'},
-    {key:'Blankets',label:'Blankets'},
-  ]},
+  {cat:"Women's",items:[{key:'WomTees',label:"Women's Tees"},{key:'WomFleece',label:"Women's Fleece"}]},
+  {cat:'Headwear',items:[{key:'HW',label:'Headwear'},{key:'Knit',label:'Knit Caps'}]},
+  {cat:'Youth',items:[{key:'YouthTees',label:'Youth Tees'},{key:'YouthFleece',label:'Youth Fleece'},{key:'WinterKnits',label:'Winter Knits'}]},
+  {cat:'Other',items:[{key:'Hair',label:'Hair Accessories'},{key:'HomeDecor',label:'Home D&eacute;cor'},{key:'Blankets',label:'Blankets'}]},
 ];
 
+// ── STATE ──────────────────────────────────────────────────────────────────
+let activeConf    = 'ALL';
+let activeP4      = false;
+let activeChannel = null;
+let activeBrand   = null;
+
+// ── CELL RENDERERS ────────────────────────────────────────────────────────
 function cellHtml(val, color) {
-  if (!val || val === 'na') return '<td class="v-na">—</td>';
-  if (val === 'check') return `<td class="v-check" style="color:${color}">✓</td>`;
+  if (!val || val === 'na') return '<td class="v-na">&mdash;</td>';
+  if (val === 'check') return '<td class="v-check" style="color:' + color + '">&#x2713;</td>';
   if (val === 'denied') return '<td class="v-denied">DENIED</td>';
-  if (val.startsWith('rate:')) return `<td class="v-rate" style="color:${color}">${val.slice(5)}</td>`;
+  if (val.startsWith('rate:')) return '<td class="v-rate" style="color:' + color + '">' + val.slice(5) + '</td>';
   if (val.startsWith('hw:')) return '<td class="v-hw">HW Only</td>';
-  if (val.startsWith('note:')) return `<td class="v-note">${val.slice(5)}</td>`;
-  return `<td class="v-note">${val}</td>`;
+  if (val.startsWith('note:')) return '<td class="v-note">' + val.slice(5) + '</td>';
+  return '<td>' + val + '</td>';
 }
 
+function brandCellHtml(val, color) {
+  if (!val || val === 'na') return '<span class="s-na">&mdash;</span>';
+  if (val === 'denied') return '<span class="s-denied">DENIED</span>';
+  if (val === 'check') return '<span class="s-check" style="color:' + color + '">&#x2713;</span>';
+  if (val.startsWith('hw:')) return '<span class="s-hw">HW</span>';
+  if (val.startsWith('rate:')) return '<span class="s-check" style="color:' + color + ';font-size:11px">' + val.slice(5) + '</span>';
+  return '<span style="font-size:9px;color:#666">' + val.slice(5) + '</span>';
+}
+
+// ── DATA HELPERS ──────────────────────────────────────────────────────────
+function getVal(school, channel, brandKey) {
+  if (brandKey === 'Vault') {
+    return (school.vault && school.vault[channel]) ? 'check' : 'na';
+  }
+  var chData = school.data[channel];
+  if (!chData) return 'na';
+  return chData[brandKey] || 'na';
+}
+
+function hasRights(val) {
+  return val && val !== 'na' && val !== 'denied';
+}
+
+function schoolPassesFilter(school) {
+  if (!activeChannel && !activeBrand) return true;
+  var channels = activeChannel ? [activeChannel] : ['CAMP','SGSS','ITC','SMT','GOLF'];
+  var brands   = activeBrand   ? [activeBrand]   : ['League','Legacy','Locale','OurayApp','OurayHW','Vault'];
+  for (var i = 0; i < channels.length; i++) {
+    for (var j = 0; j < brands.length; j++) {
+      if (hasRights(getVal(school, channels[i], brands[j]))) return true;
+    }
+  }
+  return false;
+}
+
+// ── BUILD TABLE (full school card) ────────────────────────────────────────
 function buildTable(school) {
-  const color = school.colors.primary;
-  const d = school.data;
-  let html = `<div class="legend-strip">
-    <span class="leg-item"><span style="color:${color};font-weight:700">✓</span> Rights granted</span>
-    <span class="leg-item"><span style="color:#ccc">—</span> Not applicable</span>
-    <span class="leg-item"><span style="color:#cc0000;font-weight:700;font-size:10px">DENIED</span> Explicitly denied</span>
-    <span class="leg-item"><span style="color:#7B6000;font-weight:700;font-size:10px">HW</span> Headwear only</span>
-    <span class="leg-item" style="margin-left:auto;font-style:italic">Rates = % of net sales</span>
-  </div>
-  <div class="table-wrap"><table>
-  <thead><tr>
-    <th>BRAND / LABEL</th>
-    ${CHANNELS.map(c=>`<th title="${CHANNEL_NAMES[c]}">${c}<br><span style="font-size:8px;font-weight:300;opacity:0.75">${CHANNEL_NAMES[c]}</span></th>`).join('')}
-  </tr></thead><tbody>`;
-  for (const section of ROWS) {
-    html += `<tr class="cat-row"><td colspan="6">${section.cat}</td></tr>`;
-    for (const item of section.items) {
-      html += `<tr class="data-row"><td>${item.label}</td>`;
-      for (const ch of CHANNELS) {
-        let val;
+  var color = school.colors.primary;
+  var d = school.data;
+  var html = '<div class="legend-strip">'
+    + '<span class="leg-item"><span style="color:' + color + ';font-weight:700">&#x2713;</span> Rights granted</span>'
+    + '<span class="leg-item"><span style="color:#ccc">&mdash;</span> Not applicable</span>'
+    + '<span class="leg-item"><span style="color:#cc0000;font-weight:700;font-size:10px">DENIED</span> Explicitly denied</span>'
+    + '<span class="leg-item"><span style="color:#7B6000;font-weight:700;font-size:10px">HW</span> Headwear only</span>'
+    + '<span class="leg-item" style="margin-left:auto;font-style:italic">Rates = % of net sales</span>'
+    + '</div><div class="table-wrap"><table><thead><tr>'
+    + '<th style="text-align:left;padding-left:14px;min-width:150px">BRAND / LABEL</th>';
+  for (var ci = 0; ci < CHANNELS.length; ci++) {
+    var ch = CHANNELS[ci];
+    html += '<th title="' + CHANNEL_NAMES[ch] + '">' + ch + '<br><span style="font-size:8px;font-weight:300;opacity:0.75">' + CHANNEL_NAMES[ch] + '</span></th>';
+  }
+  html += '</tr></thead><tbody>';
+  for (var si = 0; si < ROWS.length; si++) {
+    var section = ROWS[si];
+    html += '<tr class="cat-row"><td colspan="6">' + section.cat + '</td></tr>';
+    for (var ii = 0; ii < section.items.length; ii++) {
+      var item = section.items[ii];
+      html += '<tr class="data-row"><td>' + item.label + '</td>';
+      for (var ci2 = 0; ci2 < CHANNELS.length; ci2++) {
+        var ch2 = CHANNELS[ci2];
+        var val;
         if (item.key === 'Vault') {
-          val = (school.vault && school.vault[ch]) ? 'check' : 'na';
+          val = (school.vault && school.vault[ch2]) ? 'check' : 'na';
         } else {
-          const chData = d[ch];
-          val = chData ? chData[item.key] : null;
+          var chData = d[ch2];
+          val = chData ? (chData[item.key] || 'na') : 'na';
         }
         html += cellHtml(val, color);
       }
@@ -184,69 +276,39 @@ function buildTable(school) {
   }
   html += '</tbody></table></div>';
 
-  // VAULT SECTION
+  // Vault section
   if (school.vault && Object.keys(school.vault).length > 0) {
-    const vd = school.vault;
-    const vChannels = ['CAMP','SGSS','ITC','SMT','GOLF'].filter(ch => vd[ch]);
+    var vd = school.vault;
+    var vChannels = CHANNELS.filter(function(ch) { return vd[ch]; });
     if (vChannels.length > 0) {
-      html += `<div style="border-top:2px solid ${color};margin-top:0">
-        <div style="background:${color};color:#fff;padding:7px 14px;font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;display:flex;align-items:center;gap:8px">
-          <span style="font-size:14px">🏛</span> Vault / Vintage Rights
-          <span style="font-weight:300;font-size:10px;opacity:0.8;margin-left:4px">— separate rights file, as of Nov 2025</span>
-        </div>
-        <div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table style="min-width:400px">
-        <thead><tr style="background:${color}cc">
-          <th style="text-align:left;padding-left:14px;min-width:160px;color:#fff;padding:7px 8px;font-size:10px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase">Category / Product</th>`;
-      for (const ch of vChannels) {
-        html += `<th style="color:#fff;padding:7px 8px;text-align:center;font-size:10px;font-weight:700;letter-spacing:0.5px;border-right:1px solid rgba(255,255,255,0.15)">${ch}<br><span style="font-size:8px;font-weight:300;opacity:0.75">${CHANNEL_NAMES[ch]||ch}</span></th>`;
+      html += '<div style="border-top:2px solid ' + color + '">'
+        + '<div style="background:' + color + ';color:#fff;padding:7px 14px;font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;display:flex;align-items:center;gap:8px">'
+        + '<span style="font-size:14px">&#x1F3DB;</span> Vault / Vintage Rights'
+        + '<span style="font-weight:300;font-size:10px;opacity:0.8;margin-left:4px">&mdash; separate rights file, as of Nov 2025</span>'
+        + '</div><div style="overflow-x:auto"><table style="min-width:400px">'
+        + '<thead><tr style="background:' + color + 'cc"><th style="text-align:left;padding-left:14px;min-width:160px;color:#fff;padding:7px 8px;font-size:10px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase">Category / Product</th>';
+      for (var vi = 0; vi < vChannels.length; vi++) {
+        html += '<th style="color:#fff;padding:7px 8px;text-align:center;font-size:10px;font-weight:700;border-right:1px solid rgba(255,255,255,0.15)">' + vChannels[vi] + '</th>';
       }
       html += '</tr></thead><tbody>';
-
-      // CAMP has VaultApparel/VaultHW brand rows; others have League/Legacy
-      const campVault = vd['CAMP'];
-      const hasCamp = vChannels.includes('CAMP');
-
-      // Brand labels section
-      html += '<tr class="cat-row"><td colspan="' + (vChannels.length+1) + '">Brand Labels</td></tr>';
-      if (hasCamp) {
-        html += '<tr class="data-row"><td style="padding-left:14px;color:#444">Apparel Rights</td>';
-        for (const ch of vChannels) {
-          if (ch === 'CAMP') html += cellHtml(campVault ? campVault['VaultApparel'] : null, color);
-          else html += cellHtml(vd[ch] ? vd[ch]['League'] : null, color);
-        }
-        html += '</tr>';
-        html += '<tr class="data-row"><td style="padding-left:14px;color:#444">Headwear Rights</td>';
-        for (const ch of vChannels) {
-          if (ch === 'CAMP') html += cellHtml(campVault ? campVault['VaultHW'] : null, color);
-          else html += cellHtml(vd[ch] ? vd[ch]['Legacy'] : null, color);
-        }
-        html += '</tr>';
-      } else {
-        html += '<tr class="data-row"><td style="padding-left:14px;color:#444">League</td>';
-        for (const ch of vChannels) html += cellHtml(vd[ch] ? vd[ch]['League'] : null, color);
-        html += '</tr>';
-        html += '<tr class="data-row"><td style="padding-left:14px;color:#444">Legacy</td>';
-        for (const ch of vChannels) html += cellHtml(vd[ch] ? vd[ch]['Legacy'] : null, color);
-        html += '</tr>';
-      }
-
-      // Product rows
-      const vaultRows = [
-        {cat:"Men's", items:[
-          {key:'MenTees',label:"Men's Tees"},{key:'MenFleece',label:"Men's Fleece"},
-          {key:'MenGolf',label:"Men's Golf/Polo"},{key:'MenQZ',label:"Men's Non-Fleece ¼ Zip"},{key:'Outerwear',label:'Outerwear'}
-        ]},
-        {cat:"Women's", items:[{key:'WomTees',label:"Women's Tees"},{key:'WomFleece',label:"Women's Fleece"}]},
-        {cat:'Headwear', items:[{key:'HW',label:'Headwear'},{key:'Knit',label:'Knit Caps'}]},
-        {cat:'Youth', items:[{key:'YouthTees',label:'Youth Tees'},{key:'YouthFleece',label:'Youth Fleece'},{key:'WinterKnits',label:'Winter Knits'}]},
-        {cat:'Other', items:[{key:'Hair',label:'Hair Accessories'},{key:'HomeDecor',label:'Home Décor'},{key:'Blankets',label:'Blankets'}]},
+      var vaultRows = [
+        {cat:'Brand Labels',items:[{key:'VaultApparel',label:'Apparel Rights'},{key:'VaultHW',label:'Headwear Rights'},{key:'League',label:'League'},{key:'Legacy',label:'Legacy'}]},
+        {cat:"Men's",items:[{key:'MenTees',label:"Men's Tees"},{key:'MenFleece',label:"Men's Fleece"},{key:'MenGolf',label:"Men's Golf/Polo"},{key:'MenQZ',label:"Men's Non-Fleece 1/4 Zip"},{key:'Outerwear',label:'Outerwear'}]},
+        {cat:"Women's",items:[{key:'WomTees',label:"Women's Tees"},{key:'WomFleece',label:"Women's Fleece"}]},
+        {cat:'Headwear',items:[{key:'HW',label:'Headwear'},{key:'Knit',label:'Knit Caps'}]},
+        {cat:'Youth',items:[{key:'YouthTees',label:'Youth Tees'},{key:'YouthFleece',label:'Youth Fleece'},{key:'WinterKnits',label:'Winter Knits'}]},
+        {cat:'Other',items:[{key:'Hair',label:'Hair Accessories'},{key:'HomeDecor',label:'Home Decor'},{key:'Blankets',label:'Blankets'}]},
       ];
-      for (const section of vaultRows) {
-        html += '<tr class="cat-row"><td colspan="' + (vChannels.length+1) + '">' + section.cat + '</td></tr>';
-        for (const item of section.items) {
-          html += '<tr class="data-row"><td style="padding-left:14px;color:#444">' + item.label + '</td>';
-          for (const ch of vChannels) {
-            html += cellHtml(vd[ch] ? vd[ch][item.key] : null, color);
+      for (var vsi = 0; vsi < vaultRows.length; vsi++) {
+        var vsec = vaultRows[vsi];
+        html += '<tr class="cat-row"><td colspan="' + (vChannels.length+1) + '">' + vsec.cat + '</td></tr>';
+        for (var vii = 0; vii < vsec.items.length; vii++) {
+          var vitem = vsec.items[vii];
+          html += '<tr class="data-row"><td style="padding-left:14px;color:#444">' + vitem.label + '</td>';
+          for (var vci = 0; vci < vChannels.length; vci++) {
+            var vch = vChannels[vci];
+            var vval = vd[vch] ? (vd[vch][vitem.key] || 'na') : 'na';
+            html += cellHtml(vval, color);
           }
           html += '</tr>';
         }
@@ -254,108 +316,247 @@ function buildTable(school) {
       html += '</tbody></table></div></div>';
     }
   }
-
   return html;
 }
 
-function confMatch(school, conf) {
-  if (conf === 'ALL') return true;
-  const sc = school.conf.toUpperCase();
-  if (conf === 'BIG 10') return sc.includes('BIG 10') || sc.includes('BIG TEN');
-  if (conf === 'BIG 12') return sc.includes('BIG 12');
-  return sc.includes(conf);
+// ── PRINT ─────────────────────────────────────────────────────────────────
+function printCard(idx) {
+  var s = SCHOOLS[idx];
+  var w = window.open('','_blank');
+  w.document.write('<!DOCTYPE html><html><head><title>' + s.name + ' &mdash; L2 Brands</title>'
+    + '<style>body{font-family:Arial,sans-serif;font-size:11px;margin:20px}'
+    + 'h2{font-size:15px;margin-bottom:4px}p{font-size:10px;color:#666;margin-bottom:12px}'
+    + 'table{width:100%;border-collapse:collapse;font-size:10px}'
+    + 'thead tr{background:' + s.colors.primary + ';color:#fff}'
+    + 'th{padding:5px 7px;text-align:center;font-size:9px;font-weight:700;border-right:1px solid rgba(255,255,255,0.2)}'
+    + 'th:first-child{text-align:left;padding-left:10px}'
+    + 'tr.cat-row{background:#eee;} tr.cat-row td{font-size:8.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:4px 7px}'
+    + 'td{padding:4px 7px;border-bottom:1px solid #f0f0f0;text-align:center}'
+    + 'td:first-child{text-align:left;padding-left:10px}'
+    + '</style></head><body>'
+    + '<h2>' + s.name + '</h2>'
+    + '<p>Conference: ' + s.conf + ' &nbsp;|&nbsp; Agency: ' + s.agency + ' &nbsp;|&nbsp; State: ' + s.state + ' &nbsp;|&nbsp; L2 Brands Rights &amp; Rates &mdash; May 7, 2026</p>'
+    + buildTable(s)
+    + '</body></html>');
+  w.document.close();
+  setTimeout(function(){ w.print(); }, 300);
 }
 
-let activeConf = 'ALL';
-let activeP4 = false;
+// ── CARD TOGGLE ───────────────────────────────────────────────────────────
+function toggleCard(card) {
+  var isOpen = card.classList.contains('open');
+  document.querySelectorAll('.school-card.open').forEach(function(c){ c.classList.remove('open'); });
+  if (!isOpen) {
+    card.classList.add('open');
+    setTimeout(function(){ card.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 50);
+  }
+}
 
-function renderSchools() {
-  const q = document.getElementById('searchInput').value.toLowerCase().trim();
-  const filtered = SCHOOLS.filter(s => {
-    const nameMatch = !q || s.name.toLowerCase().includes(q) || s.conf.toLowerCase().includes(q) || s.state.toLowerCase().includes(q) || (s.agency||'').toLowerCase().includes(q);
+function openCard(schoolIdx) {
+  activeChannel = null;
+  activeBrand   = null;
+  document.querySelectorAll('.filter-btn[id^="ch"]').forEach(function(b){ b.classList.remove('active'); });
+  document.querySelectorAll('.filter-btn[id^="br"]').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('clearBtn').style.display = 'none';
+  render();
+  setTimeout(function(){
+    var cards = document.querySelectorAll('.school-card');
+    for (var i = 0; i < cards.length; i++) {
+      if (parseInt(cards[i].dataset.idx) === schoolIdx) {
+        toggleCard(cards[i]);
+        cards[i].scrollIntoView({behavior:'smooth', block:'start'});
+        break;
+      }
+    }
+  }, 80);
+}
+
+// ── MAIN RENDER ───────────────────────────────────────────────────────────
+function render() {
+  var q = document.getElementById('searchInput').value.toLowerCase().trim();
+
+  var filtered = SCHOOLS.filter(function(s) {
+    if (q && !s.name.toLowerCase().includes(q) && !s.conf.toLowerCase().includes(q)
+           && !s.state.toLowerCase().includes(q) && !(s.agency||'').toLowerCase().includes(q)) return false;
     if (activeP4 && !s.p4) return false;
-    return nameMatch && confMatch(s, activeConf);
+    if (activeConf !== 'ALL') {
+      var sc = s.conf.toUpperCase();
+      if (activeConf === 'SEC'   && !sc.includes('SEC'))   return false;
+      if (activeConf === 'BIG10' && !sc.includes('BIG 10') && !sc.includes('BIG TEN')) return false;
+      if (activeConf === 'ACC'   && !sc.includes('ACC'))   return false;
+      if (activeConf === 'BIG12' && !sc.includes('BIG 12')) return false;
+    }
+    return schoolPassesFilter(s);
   });
-  const grid = document.getElementById('schoolGrid');
-  document.getElementById('schoolCount').textContent = `${filtered.length} school${filtered.length!==1?'s':''}`;
+
+  document.getElementById('schoolCount').textContent = filtered.length + ' school' + (filtered.length !== 1 ? 's' : '');
+  document.getElementById('clearBtn').style.display = (activeChannel || activeBrand) ? 'inline' : 'none';
+
+  var grid = document.getElementById('schoolGrid');
+
   if (!filtered.length) {
     grid.innerHTML = '<div class="no-results">No schools found. Try a different search.</div>';
     return;
   }
-  grid.innerHTML = filtered.map((s,i) => {
-    const color = s.colors.primary;
-    const confStyle = `background:${color}22;color:${color};border-color:${color}55`;
-    return `<div class="school-card" data-idx="${SCHOOLS.indexOf(s)}" style="--school-color:${color}">
-      <div class="card-header" onclick="toggleCard(this.parentElement)">
-        <div class="color-bar"></div>
-        <div class="card-meta">
-          <div class="card-name">${s.name}</div>
-          <div class="card-sub">Agency: ${s.agency} &nbsp;·&nbsp; State: ${s.state}</div>
-          <div class="card-badges">
-            <span class="cbadge" style="${confStyle}">${s.conf}</span>
-            ${s.p4 ? '<span class="cbadge" style="background:#1a1a2e22;color:#1a1a2e;border-color:#1a1a2e55">⭐ Power 4</span>' : ''}
-          </div>
-        </div>
-        <span class="card-arrow">▼</span>
-      </div>
-      <div class="card-body">
-        ${buildTable(s)}
-        <div class="card-footer">
-          <span class="footer-info">L2 Brands Rights &amp; Rates — As of May 7, 2026 &nbsp;·&nbsp; Internal Use Only</span>
-          <button class="print-btn" onclick="printCard(${SCHOOLS.indexOf(s)})">⎙ Print</button>
-        </div>
-      </div>
-    </div>`;
+
+  // SUMMARY VIEW when channel or brand filter active
+  if (activeChannel || activeBrand) {
+    var channels     = activeChannel ? [activeChannel] : ['CAMP','SGSS','ITC','SMT','GOLF'];
+    var brands       = activeBrand   ? [activeBrand]   : ['League','Legacy','Locale','OurayApp','OurayHW','Vault'];
+    var brandLabels  = {League:'League',Legacy:'Legacy',Locale:'Locale',OurayApp:'Ouray Apparel',OurayHW:'Ouray HW',Vault:'Vault/Vintage'};
+
+    var colHeaders = [];
+    for (var ci = 0; ci < channels.length; ci++) {
+      for (var bi = 0; bi < brands.length; bi++) {
+        var lbl = channels.length > 1 ? (channels[ci] + ' / ' + brandLabels[brands[bi]]) : brandLabels[brands[bi]];
+        colHeaders.push({ch:channels[ci], br:brands[bi], label:lbl});
+      }
+    }
+
+    var thHtml = '<th>School</th>';
+    for (var hi = 0; hi < colHeaders.length; hi++) {
+      thHtml += '<th>' + colHeaders[hi].label + '</th>';
+    }
+
+    var rowsHtml = '';
+    for (var fi = 0; fi < filtered.length; fi++) {
+      var s     = filtered[fi];
+      var color = s.colors.primary;
+      var idx   = SCHOOLS.indexOf(s);
+      var meta  = (s.conf||'') + (s.conf && s.state ? ' &middot; ' : '') + (s.state||'') + (s.p4 ? ' &middot; &#11088;' : '');
+      var tdHtml = '<td><div class="s-school">' + s.name + '</div><div class="s-meta">' + meta + '</div></td>';
+      for (var ci2 = 0; ci2 < colHeaders.length; ci2++) {
+        var val = getVal(s, colHeaders[ci2].ch, colHeaders[ci2].br);
+        tdHtml += '<td>' + brandCellHtml(val, color) + '</td>';
+      }
+      rowsHtml += '<tr onclick="openCard(' + idx + ')" title="Click for full profile">' + tdHtml + '</tr>';
+    }
+
+    var titleBrand = activeBrand ? brandLabels[activeBrand] : 'All Brands';
+    var titleCh    = activeChannel || 'All Channels';
+    var subtitle   = filtered.length + ' school' + (filtered.length !== 1 ? 's' : '') + ' with rights &mdash; click any row for full profile';
+
+    grid.innerHTML =
+      '<div class="summary-wrap">'
+      + '<div class="summary-header">'
+      +   '<div class="summary-title">' + titleBrand + ' &middot; ' + titleCh + '</div>'
+      +   '<div class="summary-subtitle">' + subtitle + '</div>'
+      + '</div>'
+      + '<div style="overflow-x:auto">'
+      +   '<table class="summary-table">'
+      +     '<thead><tr>' + thHtml + '</tr></thead>'
+      +     '<tbody>' + rowsHtml + '</tbody>'
+      +   '</table>'
+      + '</div>'
+      + '</div>';
+    return;
+  }
+
+  // NORMAL CARD VIEW
+  grid.innerHTML = filtered.map(function(s) {
+    var color     = s.colors.primary;
+    var confStyle = 'background:' + color + '22;color:' + color + ';border-color:' + color + '55';
+    var p4badge   = s.p4 ? '<span class="cbadge" style="background:#1a1a2e22;color:#1a1a2e;border-color:#1a1a2e55">&#11088; Power 4</span>' : '';
+    return '<div class="school-card" data-idx="' + SCHOOLS.indexOf(s) + '" style="--school-color:' + color + '">'
+      + '<div class="card-header" onclick="toggleCard(this.parentElement)">'
+      +   '<div class="color-bar"></div>'
+      +   '<div class="card-meta">'
+      +     '<div class="card-name">' + s.name + '</div>'
+      +     '<div class="card-sub">Agency: ' + s.agency + ' &nbsp;&middot;&nbsp; State: ' + s.state + '</div>'
+      +     '<div class="card-badges">'
+      +       '<span class="cbadge" style="' + confStyle + '">' + s.conf + '</span>'
+      +       p4badge
+      +     '</div>'
+      +   '</div>'
+      +   '<span class="card-arrow">&#9660;</span>'
+      + '</div>'
+      + '<div class="card-body">'
+      +   buildTable(s)
+      +   '<div class="card-footer">'
+      +     '<span class="footer-info">L2 Brands Rights &amp; Rates &mdash; As of July 21, 2026 &nbsp;&middot;&nbsp; Internal Use Only</span>'
+      +     '<button class="print-btn" onclick="printCard(' + SCHOOLS.indexOf(s) + ')">&#x2399; Print</button>'
+      +   '</div>'
+      + '</div>'
+      + '</div>';
   }).join('');
 }
 
-function toggleCard(card) {
-  const isOpen = card.classList.contains('open');
-  document.querySelectorAll('.school-card.open').forEach(c => c.classList.remove('open'));
-  if (!isOpen) {
-    card.classList.add('open');
-    setTimeout(() => card.scrollIntoView({behavior:'smooth',block:'nearest'}), 50);
-  }
-}
+// ── EVENT LISTENERS ───────────────────────────────────────────────────────
+document.getElementById('searchInput').addEventListener('input', render);
 
-function printCard(idx) {
-  const s = SCHOOLS[idx];
-  const w = window.open('','_blank');
-  w.document.write(`<!DOCTYPE html><html><head><title>${s.name} — L2 Brands</title>
-  <style>body{font-family:Arial,sans-serif;font-size:11px;margin:20px}
-  h2{font-size:15px;margin-bottom:4px}p{font-size:10px;color:#666;margin-bottom:12px}
-  table{width:100%;border-collapse:collapse;font-size:10px}
-  thead tr{background:${s.colors.primary};color:#fff}
-  th{padding:5px 7px;text-align:center;font-size:9px;font-weight:700;border-right:1px solid rgba(255,255,255,0.2)}
-  th:first-child{text-align:left;padding-left:10px}
-  tr.cat{background:#eee;font-size:8.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase}
-  td{padding:4px 7px;border-bottom:1px solid #f0f0f0;text-align:center}
-  td:first-child{text-align:left;padding-left:10px}
-  </style></head><body>
-  <h2>${s.name}</h2>
-  <p>Conference: ${s.conf} &nbsp;|&nbsp; Agency: ${s.agency} &nbsp;|&nbsp; State: ${s.state} &nbsp;|&nbsp; L2 Brands Rights &amp; Rates — May 7, 2026</p>
-  ${buildTable(s).replace(/<div[^>]*>/g,'').replace(/<\/div>/g,'').replace(/class="v-rate"/g,'').replace(/class="v-check"/g,'').replace(/class="v-denied"/g,'style="color:red;font-weight:bold"').replace(/class="v-na"/g,'').replace(/class="v-hw"/g,'').replace(/class="v-note"/g,'')}
-  </body></html>`);
-  w.document.close();
-  setTimeout(()=>w.print(),300);
-}
+document.getElementById('confALL').addEventListener('click', function(){
+  activeConf = 'ALL';
+  ['confALL','confSEC','confBIG10','confACC','confBIG12'].forEach(function(id){
+    document.getElementById(id).classList.remove('active');
+  });
+  this.classList.add('active');
+  render();
+});
+document.getElementById('confSEC').addEventListener('click', function(){
+  activeConf = 'SEC';
+  ['confALL','confSEC','confBIG10','confACC','confBIG12'].forEach(function(id){ document.getElementById(id).classList.remove('active'); });
+  this.classList.add('active'); render();
+});
+document.getElementById('confBIG10').addEventListener('click', function(){
+  activeConf = 'BIG10';
+  ['confALL','confSEC','confBIG10','confACC','confBIG12'].forEach(function(id){ document.getElementById(id).classList.remove('active'); });
+  this.classList.add('active'); render();
+});
+document.getElementById('confACC').addEventListener('click', function(){
+  activeConf = 'ACC';
+  ['confALL','confSEC','confBIG10','confACC','confBIG12'].forEach(function(id){ document.getElementById(id).classList.remove('active'); });
+  this.classList.add('active'); render();
+});
+document.getElementById('confBIG12').addEventListener('click', function(){
+  activeConf = 'BIG12';
+  ['confALL','confSEC','confBIG10','confACC','confBIG12'].forEach(function(id){ document.getElementById(id).classList.remove('active'); });
+  this.classList.add('active'); render();
+});
 
-document.getElementById('searchInput').addEventListener('input', renderSchools);
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (btn.dataset.p4) {
-      activeP4 = !activeP4;
-      document.querySelectorAll('.filter-btn[data-p4]').forEach(b=>b.classList.toggle('active', activeP4));
+document.getElementById('p4btn').addEventListener('click', function(){
+  activeP4 = !activeP4;
+  this.classList.toggle('active', activeP4);
+  render();
+});
+
+['CAMP','SGSS','ITC','SMT','GOLF'].forEach(function(ch){
+  document.getElementById('ch' + ch).addEventListener('click', function(){
+    if (activeChannel === ch) {
+      activeChannel = null;
+      this.classList.remove('active');
     } else {
-      document.querySelectorAll('.filter-btn[data-conf]').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      activeConf = btn.dataset.conf;
+      activeChannel = ch;
+      ['CAMP','SGSS','ITC','SMT','GOLF'].forEach(function(c){ document.getElementById('ch'+c).classList.remove('active'); });
+      this.classList.add('active');
     }
-    renderSchools();
+    render();
   });
 });
 
-renderSchools();
+['League','Legacy','Locale','OurayApp','OurayHW','Vault'].forEach(function(br){
+  document.getElementById('br' + br).addEventListener('click', function(){
+    if (activeBrand === br) {
+      activeBrand = null;
+      this.classList.remove('active');
+    } else {
+      activeBrand = br;
+      ['League','Legacy','Locale','OurayApp','OurayHW','Vault'].forEach(function(b){ document.getElementById('br'+b).classList.remove('active'); });
+      this.classList.add('active');
+    }
+    render();
+  });
+});
+
+document.getElementById('clearBtn').addEventListener('click', function(){
+  activeChannel = null;
+  activeBrand   = null;
+  ['CAMP','SGSS','ITC','SMT','GOLF'].forEach(function(c){ document.getElementById('ch'+c).classList.remove('active'); });
+  ['League','Legacy','Locale','OurayApp','OurayHW','Vault'].forEach(function(b){ document.getElementById('br'+b).classList.remove('active'); });
+  render();
+});
+
+// Initial render
+render();
 </script>
 </body>
 </html>
